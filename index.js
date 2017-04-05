@@ -7,7 +7,7 @@ import {
 export default class Index extends React.Component {
     render() {
         return (
-            <Text>hello world</Text>
+            <Text>hi world</Text>
         );
     }
 }
