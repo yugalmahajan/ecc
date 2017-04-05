@@ -13,12 +13,4 @@ import {
 } from 'react-native';
 import Index from 'index.js';
 
-export default class ecc extends Component {
-  render() {
-    return (
-      <Index/>
-    );
-  }
-}
-
-AppRegistry.registerComponent('ecc', () => ecc);
+AppRegistry.registerComponent('ecc', () => Index);
