@@ -5,13 +5,14 @@ import {
     StyleSheet,
     Text,
 } from 'react-native';
+import Home from './components/home';
 
 export default class Index extends React.Component {
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.hello}>hello world</Text>
-            </View>
+            
+                <Home />
+            
         );
     }
 }
@@ -21,7 +22,5 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flex: 1,
     },
-    hello: {
-        fontSize: 64,
-    }
+
 });
