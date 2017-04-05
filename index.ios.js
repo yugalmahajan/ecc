@@ -1,16 +1,6 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
-import React, { Component } from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
+	AppRegistry,
 } from 'react-native';
-import Index from 'index.js';
+import Home from './components/home.js';
 
-AppRegistry.registerComponent('ecc', () => Index);
+AppRegistry.registerComponent('ecc', () => Home);

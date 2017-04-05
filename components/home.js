@@ -7,13 +7,9 @@ import {
     Button
 } from 'react-native';
 
-
 export default class Home extends Component {
-
     render() {
-
         return (
-
             <View style={styles.container}>
                 <View style={styles.messageContainer}>
                 </View>
@@ -21,30 +17,20 @@ export default class Home extends Component {
                     <TextInput ref='message' style={styles.input} underlineColorAndroid='rgba(0,0,0,0)' >
                     </TextInput>
                 </View>
-
-
-            </View >
+            </View>
         );
     }
-
-
 }
 
 styles = StyleSheet.create({
-
     container: {
         flex: 1,
-        backgroundColor: 'powderblue'
-
+        backgroundColor: 'powderblue',
     },
     inputContainer: {
-
         flex: 0.1,
-        //backgroundColor: 'green',
         marginBottom: 10,
-        alignItems: 'center'
-
-
+        alignItems: 'center',
     },
     input: {
         height: 50,
@@ -52,12 +38,9 @@ styles = StyleSheet.create({
         borderColor: 'skyblue',
         borderWidth: 1,
         borderRadius: 5,
-        width: 330
-
-
+        width: 330,
     },
     messageContainer: {
         flex: 0.9,
-
-    }
-})
+    },
+});
