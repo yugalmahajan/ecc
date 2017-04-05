@@ -10,7 +10,7 @@ export default class Index extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>hello world</Text>
+                <Text style={styles.hello}>hello world</Text>
             </View>
         );
     }
@@ -21,4 +21,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flex: 1,
     },
+    hello: {
+        fontSize: 64,
+    }
 });
