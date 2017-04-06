@@ -7,13 +7,23 @@ import {
     Button
 } from 'react-native';
 
-export default class ChatBox extends Component{
+export default class ChatBox extends Component {
 
-    render(){
+    render() {
 
-        return(
+        return (
+            <View style = {styles.container}>
+                <Text>{this.props.msg}</Text>
+            </View>
 
-            
         );
     }
 }
+
+const styles = StyleSheet.create({
+
+    container:{
+
+        flex:1,
+    }
+})
