@@ -4,15 +4,18 @@ import {
     Text,
     View,
     TextInput,
-    Button
+    Button,
+    ScrollView
 } from 'react-native';
 
 export default class Home extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={styles.messageContainer}>
-                </View>
+                <ScrollView style={styles.messageContainer}>
+
+
+                </ScrollView>
                 <View style={styles.inputContainer}>
                     <TextInput ref='message' style={styles.input} underlineColorAndroid='rgba(0,0,0,0)' >
                     </TextInput>
