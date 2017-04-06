@@ -16,7 +16,7 @@ export default class Home extends Component {
                 <View style={styles.inputContainer}>
                     <TextInput ref='message' style={styles.input} underlineColorAndroid='rgba(0,0,0,0)' >
                     </TextInput>
-                </View>
+                </ View>
             </View>
         );
     }
