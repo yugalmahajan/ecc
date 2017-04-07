@@ -17,7 +17,7 @@ export default class Home extends Component {
 
                 </ScrollView>
                 <View style={styles.inputContainer}>
-                    <TextInput ref='message' style={styles.input} underlineColorAndroid='rgba(0,0,0,0)' >
+                    <TextInput ref='message' style={styles.input} underlineColorAndroid='rgba(0,0,0,0)' placeholder="Type Your Message Here...." >
                     </TextInput>
                 </ View>
             </View>
