@@ -51,22 +51,16 @@ export default class Home extends Component {
     }
 
     onSendButton() {
-
-        this.setState({
-
-            messageStore: this.state.messageStore.concat(this.state.message),
-        })
-
+        if (this.state.message != '') {
+            this.setState({
+                messageStore: this.state.messageStore.concat(this.state.message)
+            });
+        }
     }
-
     chatCreator() {
-
         return this.state.messageStore.map((message, index) => {
-            if (message != '') {
-                return (<ChatBox msg={message} />);
-            }
+            return (<ChatBox msg={message} />);
         });
-
     }
 }
 
