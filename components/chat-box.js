@@ -13,7 +13,7 @@ export default class ChatBox extends Component {
 
         return (
             <View style={styles.container}>
-                <Text>{this.props.msg}</Text>
+                <Text style={styles.chat}>{this.props.msg}</Text>
             </View>
 
         );
@@ -26,5 +26,8 @@ const styles = StyleSheet.create({
 
         flex: 1,
         backgroundColor: '#FFF',
+    },
+    chat: {
+        fontSize: 20
     }
 })
