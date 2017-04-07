@@ -13,7 +13,7 @@ export default class SendButton extends Component {
 
         return (
 
-            <Image source={require('../assets/icons/send-1-icon.png')} style={styles.container}></Image>
+            <Image source={require('../assets/icons/send-2-icon.png')} style={styles.container}></Image>
         );
     }
 }
