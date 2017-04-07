@@ -24,13 +24,11 @@ const styles = StyleSheet.create({
 
         flex: 1,
         backgroundColor: 'transparent',
-        resizeMode: 'stretch',
-        height: 49,
-        borderRadius: 5,
-        marginBottom: 2,
-        borderColor: 'skyblue',
-        borderLeftWidth: 0,
+        resizeMode: 'contain',
+        height: 45,
+        borderRadius: 22,
         borderWidth: 1,
+        marginLeft: 20,
 
 
     }

@@ -8,6 +8,7 @@ import {
     ScrollView
 } from 'react-native';
 import SendButton from './send-button';
+import Device from 'react-native-device-detection'
 
 export default class Home extends Component {
     render() {
@@ -18,9 +19,13 @@ export default class Home extends Component {
 
                 </ScrollView>
                 <View style={styles.inputContainer}>
-                    <TextInput ref='message' style={styles.input} underlineColorAndroid='rgba(0,0,0,0)' placeholder="Type Your Message Here...." >
-                    </TextInput>
-                    <SendButton />
+                    <View style={styles.input} >
+                        <TextInput ref='message' underlineColorAndroid='rgba(0,0,0,0)' placeholder="Type Your Message Here...." >
+                        </TextInput>
+                    </View>
+                    <View style={styles.buttonContainer}>
+                        <SendButton />
+                    </View>
                 </ View>
 
             </View>
@@ -40,18 +45,30 @@ styles = StyleSheet.create({
         flexDirection: 'row',
         marginLeft: 10,
 
+        width: Device.width,
+        backgroundColor: 'red'
+
+
 
     },
     input: {
+        flex: 0.9,
         height: 50,
         backgroundColor: '#FFF',
         borderColor: 'skyblue',
         borderWidth: 1,
-        borderRadius: 5,
-        borderRightwidth: 0,
+        borderTopLeftRadius: 15,
+        borderBottomLeftRadius: 15,
+        borderBottomRightRadius: 15,
         width: 300,
+
+
     },
     messageContainer: {
-        flex: 0.9,
+        flex: 0.8,
     },
+    buttonContainer: {
+
+        flex: 0.2,
+    }
 });
