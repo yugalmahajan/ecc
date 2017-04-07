@@ -7,6 +7,7 @@ import {
     Button,
     ScrollView
 } from 'react-native';
+import SendButton from './send-button';
 
 export default class Home extends Component {
     render() {
@@ -19,7 +20,9 @@ export default class Home extends Component {
                 <View style={styles.inputContainer}>
                     <TextInput ref='message' style={styles.input} underlineColorAndroid='rgba(0,0,0,0)' placeholder="Type Your Message Here...." >
                     </TextInput>
+                    <SendButton />
                 </ View>
+
             </View>
         );
     }
@@ -34,6 +37,8 @@ styles = StyleSheet.create({
         flex: 0.1,
         marginBottom: 10,
         alignItems: 'center',
+
+
     },
     input: {
         height: 50,
