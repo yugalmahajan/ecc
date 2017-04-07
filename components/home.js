@@ -18,10 +18,11 @@ export default class Home extends Component {
 
         super();
 
-        this.messageStore = [];
+        
         this.state = {
 
             message: '',
+            messageStore: [],
         }
 
     }
@@ -51,18 +52,22 @@ export default class Home extends Component {
 
     onSendButton() {
 
-        this.messageStore.push(this.state.message);
-        console.log(this.state.message)
+        this.setState({
+
+            messageStore: this.state.messageStore.concat(this.state.message),
+        })
+       
     }
 
     chatCreator() {
 
-        // return this.messageStore.map((message, index) => {
+        return this.state.messageStore.map((message, index) => {
 
-        //     return (
-        //         <ChatBox msg={message} />
-        //     );
-        // });
+            return (
+                <ChatBox msg={message} />
+                
+            );
+        });
 
     }
 }
