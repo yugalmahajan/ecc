@@ -5,7 +5,8 @@ import {
     View,
     TextInput,
     Button,
-    ScrollView
+    ScrollView,
+    Image
 } from 'react-native';
 import SendButton from './send-button';
 import Device from 'react-native-device-detection'
@@ -13,14 +14,14 @@ import Device from 'react-native-device-detection'
 export default class Home extends Component {
     render() {
         return (
-            <View style={styles.container}>
+            <Image source={require('../assets/images/background-image.jpg')} style={styles.container}>
                 <ScrollView style={styles.messageContainer}>
 
 
                 </ScrollView>
                 <View style={styles.inputContainer}>
                     <View style={styles.input} >
-                        <TextInput ref='message' underlineColorAndroid='rgba(0,0,0,0)' placeholder="Type Your Message Here...." >
+                        <TextInput ref='message' style={{ padding: 10 }} underlineColorAndroid='rgba(0,0,0,0)' placeholder="Type Your Message Here...." >
                         </TextInput>
                     </View>
                     <View style={styles.buttonContainer}>
@@ -28,7 +29,7 @@ export default class Home extends Component {
                     </View>
                 </ View>
 
-            </View>
+            </Image>
         );
     }
 }
@@ -36,7 +37,9 @@ export default class Home extends Component {
 styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'powderblue',
+        resizeMode: 'cover',
+        width: Device.width,
+
     },
     inputContainer: {
         flex: 0.2,
@@ -47,9 +50,6 @@ styles = StyleSheet.create({
         width: Device.width,
         marginLeft: 7,
         marginTop: 10,
-
-
-
     },
     input: {
         flex: 0.9,
@@ -61,9 +61,6 @@ styles = StyleSheet.create({
         borderBottomLeftRadius: 15,
         borderBottomRightRadius: 15,
         width: 300,
-
-
-
     },
     messageContainer: {
         flex: 0.8,

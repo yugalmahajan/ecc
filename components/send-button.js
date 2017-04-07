@@ -13,7 +13,7 @@ export default class SendButton extends Component {
 
         return (
 
-            <Image source={require('../assets/icons/send-2-icon.png')} style={styles.container}></Image>
+            <Image source={require('../assets/icons/icons_send-128.png')} style={styles.container}></Image>
         );
     }
 }
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     container: {
 
 
-        backgroundColor: 'powderblue',
+        //backgroundColor: 'powderblue',
         resizeMode: 'contain',
         height: 47,
         width: 47,
