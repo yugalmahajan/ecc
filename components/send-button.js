@@ -23,7 +23,15 @@ const styles = StyleSheet.create({
     container: {
 
         flex: 1,
-        // backgroundColor: 'transparent'
+        backgroundColor: 'transparent',
+        resizeMode: 'stretch',
+        height: 49,
+        borderRadius: 5,
+        marginBottom: 2,
+        borderColor: 'skyblue',
+        borderLeftWidth: 0,
+        borderWidth: 1,
+
 
     }
 })

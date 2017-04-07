@@ -37,6 +37,8 @@ styles = StyleSheet.create({
         flex: 0.1,
         marginBottom: 10,
         alignItems: 'center',
+        flexDirection: 'row',
+        marginLeft: 10,
 
 
     },
@@ -46,7 +48,8 @@ styles = StyleSheet.create({
         borderColor: 'skyblue',
         borderWidth: 1,
         borderRadius: 5,
-        width: 330,
+        borderRightwidth: 0,
+        width: 300,
     },
     messageContainer: {
         flex: 0.9,
