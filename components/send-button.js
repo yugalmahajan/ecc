@@ -4,7 +4,8 @@ import {
     Text,
     View,
     TextInput,
-    Image
+    Image,
+    TouchableHighlight
 } from 'react-native';
 
 export default class SendButton extends Component {
@@ -13,7 +14,9 @@ export default class SendButton extends Component {
 
         return (
 
-            <Image source={require('../assets/icons/icons_send-128.png')} style={styles.container}></Image>
+            <TouchableHighlight onPress={this.props.onPress}>
+                <Image source={require('../assets/icons/icons_send-128.png')} style={styles.container}></Image>
+            </TouchableHighlight>
         );
     }
 }

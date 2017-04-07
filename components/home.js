@@ -9,28 +9,61 @@ import {
     Image
 } from 'react-native';
 import SendButton from './send-button';
-import Device from 'react-native-device-detection'
+import Device from 'react-native-device-detection';
+import ChatBox from './chat-box';
 
 export default class Home extends Component {
+
+    constructor() {
+
+        super();
+
+        this.messageStore = [];
+        this.state = {
+
+            message: '',
+        }
+
+    }
     render() {
         return (
             <Image source={require('../assets/images/background-image.jpg')} style={styles.container}>
                 <ScrollView style={styles.messageContainer}>
 
-
+                    {this.chatCreator()}
                 </ScrollView>
                 <View style={styles.inputContainer}>
                     <View style={styles.input} >
-                        <TextInput ref='message' style={{ padding: 10 }} underlineColorAndroid='rgba(0,0,0,0)' placeholder="Type Your Message Here...." >
+                        <TextInput ref='message' numberOfLines={5} multiline={true} style={{ padding: 10 }}
+                            underlineColorAndroid='rgba(0,0,0,0)' placeholder="Type Your Message Here...."
+                            onChangeText={(message) => this.setState({ message })}>
                         </TextInput>
+
                     </View>
                     <View style={styles.buttonContainer}>
-                        <SendButton />
+                        <SendButton onPress={this.onSendButton.bind(this)} />
                     </View>
                 </ View>
 
             </Image>
         );
+    }
+
+    onSendButton() {
+
+        this.messageStore.push(this.state.message);
+        console.log(this.state.message)
+    }
+
+    chatCreator() {
+
+        // return this.messageStore.map((message, index) => {
+
+        //     return (
+        //         <ChatBox msg={message} />
+        //     );
+        // });
+
     }
 }
 
