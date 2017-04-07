@@ -53,7 +53,7 @@ export default class Home extends Component {
     onSendButton() {
         if (this.state.message != '') {
             this.setState({
-                messageStore: this.state.messageStore.concat(this.state.message)
+                messageStore: this.state.messageStore.concat('Unknown: ' + this.state.message)
             });
         }
     }
