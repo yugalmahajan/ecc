@@ -39,14 +39,14 @@ styles = StyleSheet.create({
         backgroundColor: 'powderblue',
     },
     inputContainer: {
-        flex: 0.1,
+        flex: 0.2,
         marginBottom: 10,
         alignItems: 'center',
+        justifyContent: 'center',
         flexDirection: 'row',
-        marginLeft: 10,
-
         width: Device.width,
-        backgroundColor: 'red'
+        marginLeft: 7,
+        marginTop: 10,
 
 
 
@@ -61,6 +61,7 @@ styles = StyleSheet.create({
         borderBottomLeftRadius: 15,
         borderBottomRightRadius: 15,
         width: 300,
+
 
 
     },
