@@ -22,7 +22,7 @@ export default class Home extends Component {
         this.state = {
 
             message: '',
-            messageStore: ['hello'],
+            messageStore: ['Bot: Hello there, I\'m Bot.'],
         }
 
     }
