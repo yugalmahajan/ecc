@@ -18,7 +18,7 @@ export default class Home extends Component {
 
         super();
 
-        
+
         this.state = {
 
             message: '',
@@ -56,17 +56,15 @@ export default class Home extends Component {
 
             messageStore: this.state.messageStore.concat(this.state.message),
         })
-       
+
     }
 
     chatCreator() {
 
         return this.state.messageStore.map((message, index) => {
-
-            return (
-                <ChatBox msg={message} />
-                
-            );
+            if (message != '') {
+                return (<ChatBox msg={message} />);
+            }
         });
 
     }
