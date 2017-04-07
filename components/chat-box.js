@@ -12,7 +12,7 @@ export default class ChatBox extends Component {
     render() {
 
         return (
-            <View style = {styles.container}>
+            <View style={styles.container}>
                 <Text>{this.props.msg}</Text>
             </View>
 
@@ -22,8 +22,9 @@ export default class ChatBox extends Component {
 
 const styles = StyleSheet.create({
 
-    container:{
+    container: {
 
-        flex:1,
+        flex: 1,
+        backgroundColor: '#FFF',
     }
 })
