@@ -51,15 +51,17 @@ export default class Home extends Component {
     }
 
     onSendButton() {
+
+        var userName = 'unknown';
         if (this.state.message != '') {
             this.setState({
-                messageStore: this.state.messageStore.concat('Unknown: ' + this.state.message)
+                messageStore: this.state.messageStore.concat(userName + ': ' + this.state.message)
             });
         }
     }
     chatCreator() {
         return this.state.messageStore.map((message, index) => {
-            return (<ChatBox msg={message} />);
+            return (<ChatBox msg={message} key={index} />);
         });
     }
 }
