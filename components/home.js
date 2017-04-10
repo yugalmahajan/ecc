@@ -52,7 +52,7 @@ export default class Home extends Component {
 
     onSendButton() {
 
-        var userName = 'unknown';
+        var userName = 'Unknown'
         if (this.state.message != '') {
             this.setState({
                 messageStore: this.state.messageStore.concat(userName + ': ' + this.state.message)

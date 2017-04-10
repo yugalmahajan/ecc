@@ -18,7 +18,9 @@ export default class ChatBox extends Component {
 const styles = StyleSheet.create({
     chat: {
         backgroundColor: '#F0F0F0',
-        borderRadius: 4,
+        borderTopRightRadius: 6,
+        borderBottomRightRadius: 6,
+        borderBottomLeftRadius: 6,
         fontSize: 16,
         marginTop: 8,
         marginLeft: 8,
